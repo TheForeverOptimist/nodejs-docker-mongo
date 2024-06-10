@@ -1,16 +1,7 @@
 import express from "express";
-
-const router = express.Router();
+import routes from "../routes/index.js";
 
 export const setupRoutes = (app) => {
-  console.log(`\n Testing setup routes function...\n `);
-
-  router.use("/", (req, res) => {
-    console.log(`\n1 - Main router middleware function activated`);
-    res.sendStatus(200);
-  });
-
-  app.use('/api', router)
-
-
+  const router = routes();
+  app.use("/api", router);
 };
