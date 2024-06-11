@@ -1,13 +1,22 @@
 import express from 'express'
 import {defaultRoutes} from './defaults.js'
+import {userRoutes} from './users.js'
+import config from '../lib/config.js';
+
 
 
 
 export default () => {
-
+    
   const router = express.Router();
 
-  defaultRoutes(router)
+    if(config.routes.default){
+        defaultRoutes(router)
+
+    }
+    if(config.routes.users){
+        userRoutes(router)
+    }
 
 
 
