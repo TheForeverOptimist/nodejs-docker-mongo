@@ -1,6 +1,6 @@
 //TODO - import setupMongo function
 import { setupMongo } from "./mongo.js";
-import { setupRoutes } from "../setupRoutes.js";
+import { setupRoutes } from "./setupRoutes.js";
 
 export const initializeApp = async (app, config) => {
   // initialize mongodb
@@ -10,5 +10,5 @@ export const initializeApp = async (app, config) => {
 
   setupRoutes(app);
 
-  console.log(`Initialized main app router...`);
+  console.log(`\n ✅ - Initialized main app router...`);
 };

@@ -10,7 +10,7 @@ export const startServer = async () => {
 
   try {
     app.listen(port, () => {
-      console.log(`Server running on port ${port}`);
+      console.log(`\n 🔥 - Server running on port ${port}`);
     });
   } catch (err) {
     throw new Error(err);
