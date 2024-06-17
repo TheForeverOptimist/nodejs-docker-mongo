@@ -6,6 +6,8 @@ export const startServer = async () => {
   const app = express();
   const port = config.port;
 
+  app.use(express.json());
+
   await initializeApp(app, config);
 
   try {
